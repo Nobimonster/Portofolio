@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .preload{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #77b3d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+  }
+  
+  .preload h3{
+    position: absolute;
+    top: 75%;
+    transform: translateY(-75%);
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .preload-finish{
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .clouds1{
+    top: 25%;
+    transform: translate(100%, -25%);
+    animation: clouds 3s ease inifinite;
+  }
+  
+  .clouds2{
+    top: 50%;
+    transform: translate(100%, -50%);
+    animation: clouds 3s ease inifinite 2s;
+  }
+  
+  .clouds3{
+    top: 75%;
+    transform: translate(100%, -75%);
+     animation: clouds 3s ease inifinite 1.5s;
+  }
+
+  .clouds1, .clouds2, .clouds3 {
+    height: 100px;
+    position: absolute;
+    right: 0%;
+    z-index: -1;
+  }
+  
+  .airplane{
+    height: 200px;
+    animation: airplane 1s ease infinite;
+  }
+  
+  section img{
+    height: 200px;
+  }
+  
+  
+  @keyframes airplane{
+    from{
+      transform: translateY(0px);
+    }
+    to{
+      transform: translateY(50px);
+    }
+  }
+  
+  @keyframes clouds{
+    from{
+      right: 0%;
+    }
+    to{
+      right: 130%;
+    }
+  }
+  
+  
+  
